@@ -1,13 +1,32 @@
 import DefaultLayout from '@/layouts/default';
-import { DatePicker, Input, Select, SelectItem } from '@nextui-org/react';
-import { ArrowLeft, ArrowRight, Cards, MapPin } from '@phosphor-icons/react';
+import {
+  Button,
+  Card,
+  CardBody,
+  CardHeader,
+  Chip,
+  DatePicker,
+  Input,
+  Select,
+  SelectItem,
+} from '@nextui-org/react';
+import {
+  ArrowLeft,
+  ArrowRight,
+  Cards,
+  CaretLeft,
+  CaretRight,
+  MagnifyingGlass,
+  MapPin,
+  Umbrella,
+} from '@phosphor-icons/react';
 import { CaretCircleDown } from '@phosphor-icons/react/dist/ssr';
 import Link from 'next/link';
 
 export default function IndexPage() {
   return (
     <DefaultLayout>
-      <div>
+      <div className="text-black">
         <div className="relative bg-[url('https://logitrix-6eb9f.firebaseapp.com/images/backgroundImage.png')] bg-cover h-[28rem] p-10 text-white rounded-3xl w-full">
           <div className="absolute inset-0 bg-black/20 rounded-3xl"></div>
           <div className="flex font-poppins relative z-10 flex-col justify-center leading-[5rem]">
@@ -55,11 +74,12 @@ export default function IndexPage() {
               <h1 className="text-xl font-bold">Activity</h1>
               <Select
                 // label="Favorite Animal"
-                variant='underlined'
+                variant="underlined"
                 placeholder="Select an animal"
                 labelPlacement="outside"
-                className="max-w-xs"
+                className="w-40"
                 disableSelectorIconRotation
+                defaultSelectedKeys={['bungee']}
                 selectorIcon={<CaretCircleDown size={32} />}
               >
                 <SelectItem key="bungee">Bungee Jump</SelectItem>
@@ -69,6 +89,49 @@ export default function IndexPage() {
               <h1 className="text-xl font-bold">Date</h1>
               <DatePicker />
             </div>
+            <div>
+              <Button className='h-14 w-12 bg-teal-600'>
+                <MagnifyingGlass className='font-bold text-white' size={20} />
+              </Button>
+            </div>
+          </div>
+        </div>
+        <div className="relative my-32">
+          <div className="flex justify-between my-10">
+            <div className="">
+              <h1 className="text-3xl font-bold">Select Category</h1>
+              <p className="my-3 text-gray-600">
+                Sost Brilliant reasons Entrada should be your one-stop-shop!
+              </p>
+            </div>
+            <div className="flex gap-2">
+              <CaretLeft
+                size={15}
+                className="border-2 border-gray-600 text-gray-600 p-3 h-12 w-12 rounded-full"
+              />
+              <CaretRight
+                size={32}
+                className="border-2 bg-teal-600 text-white p-3 h-12 w-12 rounded-full"
+              />
+            </div>
+          </div>
+          <div className='flex gap-5 w-full justify-between'>
+            {Array(4)
+              .fill(null)
+              .map(() => (
+                <Card className="border !w-[300px] border-teal-100 rounded-md">
+                  <CardHeader className="relative">
+                    <Chip className="flex text-orange-400 bg-orange-400/40 absolute right-3 top-3">
+                      4.9
+                    </Chip>
+                  </CardHeader>
+                  <CardBody>
+                    <Umbrella className="text-teal-600" size={50} />
+                    <h1 className="font-bold text-xl my-5">Beach Activity</h1>
+                    <p className="text-gray-600">196 Activities</p>
+                  </CardBody>
+                </Card>
+              ))}
           </div>
         </div>
       </div>
