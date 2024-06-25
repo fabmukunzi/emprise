@@ -1,4 +1,4 @@
-import DefaultLayout from '@/layouts/default';
+import DefaultLayout from "@/layouts/default";
 import {
   Button,
   Card,
@@ -9,7 +9,7 @@ import {
   Input,
   Select,
   SelectItem,
-} from '@nextui-org/react';
+} from "@nextui-org/react";
 import {
   ArrowLeft,
   ArrowRight,
@@ -19,15 +19,15 @@ import {
   MagnifyingGlass,
   MapPin,
   Umbrella,
-} from '@phosphor-icons/react';
-import { CaretCircleDown } from '@phosphor-icons/react/dist/ssr';
-import Link from 'next/link';
+} from "@phosphor-icons/react";
+import { CaretCircleDown } from "@phosphor-icons/react/dist/ssr";
+import Link from "next/link";
 
 export default function IndexPage() {
   return (
     <DefaultLayout>
       <div className="text-black">
-        <div className="relative bg-[url('https://logitrix-6eb9f.firebaseapp.com/images/backgroundImage.png')] bg-cover h-[28rem] p-10 text-white rounded-3xl w-full">
+        <div className="relative bg-[url('https://logitrix-6eb9f.firebaseapp.com/images/backgroundImage.png')] bg-cover h-[28rem] p-10 text-white rounded-3xl">
           <div className="absolute inset-0 bg-black/20 rounded-3xl"></div>
           <div className="flex font-poppins relative z-10 flex-col justify-center leading-[5rem]">
             <h1>--The Himalayon Mountain Ranges</h1>
@@ -79,7 +79,7 @@ export default function IndexPage() {
                 labelPlacement="outside"
                 className="w-40"
                 disableSelectorIconRotation
-                defaultSelectedKeys={['bungee']}
+                defaultSelectedKeys={["bungee"]}
                 selectorIcon={<CaretCircleDown size={32} />}
               >
                 <SelectItem key="bungee">Bungee Jump</SelectItem>
@@ -90,8 +90,8 @@ export default function IndexPage() {
               <DatePicker />
             </div>
             <div>
-              <Button className='h-14 w-12 bg-teal-600'>
-                <MagnifyingGlass className='font-bold text-white' size={20} />
+              <Button className="h-14 w-12 bg-teal-600">
+                <MagnifyingGlass className="font-bold text-white" size={20} />
               </Button>
             </div>
           </div>
@@ -115,8 +115,8 @@ export default function IndexPage() {
               />
             </div>
           </div>
-          <div className='flex gap-5 w-full justify-between'>
-            {Array(4)
+          <div className="flex gap-5 w-screen bg-black">
+            {Array(8)
               .fill(null)
               .map(() => (
                 <Card className="border !w-[300px] border-teal-100 rounded-md">
