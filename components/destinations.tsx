@@ -116,6 +116,7 @@ const Destinations = () => {
             </div>
           </CardFooter>
         </Card>
+        <div className='col-span-4 grid grid-cols-5 gap-5'>
         <Card className=" row-span-2 col-span-2 !h-[230px] shadow-none border-none rounded-3xl p-0">
           <div className="bg-black/40 z-20 absolute min-h-full min-w-full"></div>
           <CardBody className="overflow-visible p-0 relative">
@@ -139,7 +140,7 @@ const Destinations = () => {
             </div>
           </CardFooter>
         </Card>
-        <Card className="col-span-2  !h-[230px] shadow-none border-none rounded-3xl p-0">
+        <Card className="col-span-3  !h-[230px] shadow-none border-none rounded-3xl p-0">
           <div className="bg-black/40 z-20 absolute min-h-full min-w-full"></div>
           <CardBody className="overflow-visible p-0 relative">
             <Chip className="flex bg-white  /50 text-orange-400 absolute z-20 left-3 top-3">
@@ -162,6 +163,7 @@ const Destinations = () => {
             </div>
           </CardFooter>
         </Card>
+        </div>
       </div>
     </div>
   );

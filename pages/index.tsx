@@ -235,7 +235,7 @@ export default function IndexPage() {
             {Array(3)
               .fill(null)
               .map(() => (
-                <Card className="!w-[360px] !h-[300px] shadow-none border-none rounded-3xl p-0">
+                <Card className="!w-full !h-[300px] shadow-none border-none rounded-3xl p-0">
                   <CardBody className="overflow-visible p-0 relative">
                     <div className="bg-black/40 rounded-3xl z-20 absolute min-h-[205px] min-w-full"></div>
                     <Image
